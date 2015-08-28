@@ -35,7 +35,8 @@ require([
   'controllers/footer',
   'controllers/notification',
   'controllers/header',
-  'controllers/formController'
+  'controllers/formController',
+  'controllers/filterController'
   // Any individual controller, service, directive or filter file
   // that you add will need to be pulled in here.
 ],
@@ -52,9 +53,13 @@ require([
                     templateUrl: 'views/favs.html',
                     controller: 'FavsCtrl'
                 })
-				.when('/forms', {
+				        .when('/forms', {
                     templateUrl: 'views/forms.html' ,
                     controller: 'FormsCtrl'         
+                })
+                .when('/filter', {
+                    templateUrl: 'views/filter.html' ,
+                    controller: 'FilterCtrl'         
                 })
                 .when('/about', {
                     templateUrl: 'views/about.html',
