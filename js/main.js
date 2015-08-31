@@ -6,7 +6,8 @@ require.config({
         jqueryColorbox: 'vendor/jquery-colorbox',
         jquery: 'vendor/jquery',
         domReady: 'vendor/domReady',
-        reactive: 'vendor/rx'
+        reactive: 'vendor/rx',
+        dirPagination: 'vendor/dirPagination'
     },
     shim: {
         angular: {
@@ -27,6 +28,7 @@ require([
   'app',
   'domReady',
   'reactive',
+  'dirPagination',
   'controllers/rootController',
   'controllers/favsController',
   'controllers/aboutController',
@@ -36,7 +38,10 @@ require([
   'controllers/notification',
   'controllers/header',
   'controllers/formController',
-  'controllers/filterController'
+  'controllers/filterController',
+  'controllers/filter_Controller',
+  'controllers/filter2_Controller',
+  'controllers/inventoryController'
   // Any individual controller, service, directive or filter file
   // that you add will need to be pulled in here.
 ],
@@ -49,17 +54,25 @@ require([
                     templateUrl: 'views/root.html',
                     controller: 'RootCtrl'
                 })
-                .when('/favs', {
-                    templateUrl: 'views/favs.html',
-                    controller: 'FavsCtrl'
+                .when('/inventory', {
+                    templateUrl: 'views/inventory.html',
+                    controller: 'InventoryCtrl'
                 })
-				        .when('/forms', {
+				        .when('/addStock', {
                     templateUrl: 'views/forms.html' ,
                     controller: 'FormsCtrl'         
                 })
                 .when('/filter', {
                     templateUrl: 'views/filter.html' ,
                     controller: 'FilterCtrl'         
+                })
+                .when('/filter_', {
+                    templateUrl: 'views/filter_.html' ,
+                    controller: 'Filter_Ctrl'         
+                })
+                .when('/filter2', {
+                    templateUrl: 'views/filter2.html' ,
+                    controller: 'Filter2_Ctrl'         
                 })
                 .when('/about', {
                     templateUrl: 'views/about.html',
