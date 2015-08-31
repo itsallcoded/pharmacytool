@@ -6,8 +6,7 @@ require.config({
         jqueryColorbox: 'vendor/jquery-colorbox',
         jquery: 'vendor/jquery',
         domReady: 'vendor/domReady',
-        reactive: 'vendor/rx',
-        dirPagination: 'vendor/dirPagination'
+        reactive: 'vendor/rx'
     },
     shim: {
         angular: {
@@ -28,7 +27,6 @@ require([
   'app',
   'domReady',
   'reactive',
-  'dirPagination',
   'controllers/rootController',
   'controllers/favsController',
   'controllers/aboutController',
