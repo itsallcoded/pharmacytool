@@ -1,0 +1,61 @@
+
+<div class="box-content row">
+    <div class="row ng-scope">
+        <div class="box col-md-12">
+            <div class="box-inner">
+                <div class="box-header well" data-original-title="">
+                    <div class="box-content">
+                        <h2><i class="glyphicon glyphicon-edit"></i> Artist Directory </h2>
+
+                        <div class="box-icon">
+                            <a href="#" class="btn btn-setting btn-round btn-default"><i class="glyphicon glyphicon-cog"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="box-content">
+                <div class="search">
+                    <label>search: </label>
+                    <input ng-model="query" placeholder="Search for artists" autofocus>
+
+                    <label class="formgroup">by:
+                        <select ng-model="artistOrder">
+                            <option value="name">Name</option>
+                            <option value="reknown">Reknown</option>
+                        </select>
+                    </label>
+
+                    <label class="formgroup">
+                        <input type="radio" ng-model="direction" name="direction" checked>
+                        ascending
+                     </label>
+                    <label class="formgroup">
+                        <input type="radio" ng-model="direction" name="direction" value="reverse">
+                        descending
+                    </label>
+
+                </div>
+                <ul class="dashboard-list">
+                    <!-- <li ng-repeat="item in artists | filter: query | orderBy: artistOrder:direction">
+                        <a href="#">
+                            <img ng-src="images/{{item.shortname}}_tn.jpg" alt="Photo of {{item.name}}">
+                        </a>
+                        <strong>Name:</strong> <h2>{{item.name}}</h2>
+                        <strong>Description:</strong> <h3>{{item.reknown}}</h3>
+                    </li> -->
+                    <li ng-repeat="item in artists | filter: query | orderBy: artistOrder:direction">
+                        <a href="#">
+                            <img class="dashboard-avatar" alt="Photo of {{item.name}}" src="images/{{item.shortname}}_tn.jpg"></a>
+                        <strong>Name:</strong> <a href="#">{{item.name}}
+                        </a><br>
+                        <strong>Since:</strong> 17/05/2014<br>
+                        <strong>Status:</strong> <span class="label-success label label-default">Approved</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--/span-->
+
+    </div>
+<div>
