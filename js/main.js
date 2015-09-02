@@ -36,6 +36,7 @@ require([
   'controllers/notification',
   'controllers/header',
   'controllers/formController',
+  'controllers/addStockController',
   'controllers/filterController',
   'controllers/filter_Controller',
   'controllers/filter2_Controller',
@@ -71,6 +72,10 @@ require([
                 .when('/filter2', {
                     templateUrl: 'views/filter2.html' ,
                     controller: 'Filter2_Ctrl'         
+                })
+                .when('/addStock', {
+                    templateUrl: 'views/addStock.html',
+                    controller: 'addStockCtrl'         
                 })
                 .when('/about', {
                     templateUrl: 'views/about.html',
