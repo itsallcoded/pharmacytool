@@ -40,7 +40,8 @@ require([
   'controllers/filterController',
   'controllers/filter_Controller',
   'controllers/filter2_Controller',
-  'controllers/inventoryController'
+  'controllers/inventoryController',
+  'controllers/addStockController'
   // Any individual controller, service, directive or filter file
   // that you add will need to be pulled in here.
 ],
@@ -58,8 +59,8 @@ require([
                     controller: 'InventoryCtrl'
                 })
 				        .when('/addStock', {
-                    templateUrl: 'views/forms.html' ,
-                    controller: 'FormsCtrl'         
+                    templateUrl: 'views/addStock.html' ,
+                    controller: 'addStockCtrl'         
                 })
                 .when('/filter', {
                     templateUrl: 'views/filter.html' ,
